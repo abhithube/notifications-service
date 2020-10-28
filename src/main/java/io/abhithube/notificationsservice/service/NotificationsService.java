@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
+import java.text.NumberFormat;
 import java.util.List;
 
 @Service
@@ -46,8 +47,10 @@ public class NotificationsService {
     public void charged(Member member) {
         List<Payment> payments  = member.getPayments();
         Long payment = payments.get(payments.size()-1).getAmount();
+        NumberFormat numberFormat = NumberFormat.getCurrencyInstance();
+        String amount = numberFormat.format(payment / 100);
         String title = "Monthly Payment Confirmation";
-        String description = "Your account has been charged $" + payment/100 + ".";
+        String description = "Your account has been charged " + amount + ".";
         createNotification(member, title, description);
     }
 

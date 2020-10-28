@@ -105,7 +105,7 @@ class NotificationsServiceTest {
 
         // Assert
         String title = "Monthly Payment Confirmation";
-        String description = "Your account has been charged $0.";
+        String description = "Your account has been charged $0.00.";
         verify(notificationsService).createNotification(member, title, description);
     }
 
