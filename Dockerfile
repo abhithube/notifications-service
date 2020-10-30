@@ -6,5 +6,5 @@ RUN mvn clean package
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 COPY --from=build app/target/notifications-service-0.0.1-SNAPSHOT.jar app.jar
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+EXPOSE ${PORT}
+ENTRYPOINT ["sh", "-c", "java -Dserver.port=${PORT} -Dspring.kafka.bootstrap-servers=${BOOTSTRAP_SERVERS} -jar /app.jar"]
