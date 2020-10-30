@@ -27,6 +27,6 @@ public class Member {
     private String subscriptionId;
 
     public void addToNotifications(Notification notification) {
-        notifications.add(notification);
+        notifications.add(0, notification);
     }
 }
