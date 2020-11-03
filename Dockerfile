@@ -6,4 +6,4 @@ RUN mvn clean package
 
 FROM adoptopenjdk/openjdk11:alpine-jre
 COPY --from=build app/target/notifications-service-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["sh", "-c", "java -Dspring.kafka.bootstrap-servers=${BOOTSTRAP_SERVERS} -jar /app.jar"]
+ENTRYPOINT ["sh", "-c", "java -Dclient.members.url=${MEMBERS_URL} -Dspring.kafka.bootstrap-servers=${BOOTSTRAP_SERVERS} -jar /app.jar"]

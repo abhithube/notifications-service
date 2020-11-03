@@ -19,7 +19,7 @@ public class Member {
     private Plan plan;
     private long memberSince;
     private long nextPaymentDate;
-    private List<Payment> payments = new ArrayList<>();
+    private List<Payment> payments;
 
     private List<Notification> notifications = new ArrayList<>();
 

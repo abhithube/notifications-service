@@ -10,8 +10,8 @@ import lombok.Setter;
 public class Plan {
     private String id;
     private String name;
-    private double cost;
-    private double deductible;
+    private long cost;
+    private long deductible;
 
     private String productId;
     private String priceId;

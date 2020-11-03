@@ -9,7 +9,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Payment {
     private String id;
-    private Long amount;
+    private long amount;
     private long createdAt;
     private String plan;
 
