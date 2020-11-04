@@ -13,6 +13,7 @@ import org.mockito.Mock;
 import org.mockito.Spy;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -114,6 +115,7 @@ class NotificationsServiceTest {
     void createNotification() {
         // Arrange
         Member member = new Member();
+        member.setNotifications(new ArrayList<>());
 
         doNothing()
                 .when(restClient).updateMember(any(Member.class));
