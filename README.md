@@ -6,10 +6,9 @@ This is the notifications microservice of the AT Insurance web application. It c
 The [README](https://github.com/abhithube/insurance-portal-angular) in the front end repo has more details about the whole project.
 
 ## Technologies
-- Programming Language: Java
-- Framework: Spring Boot
-- Messaging: Kafka
-- Testing: JUnit, Mockito
-- Build: Maven
-- CI/CD: Travis CI
-- Deployment: Docker, AWS
+- **Programming Language**: Java
+- **Framework**: Spring Boot
+- **Messaging**: Kafka
+- **Testing**: JUnit, Mockito
+- **Build**: Maven
+- **CI/CD**: Travis CI, Docker, AWS
